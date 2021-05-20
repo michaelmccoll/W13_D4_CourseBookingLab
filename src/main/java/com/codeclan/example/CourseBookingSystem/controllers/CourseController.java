@@ -20,7 +20,7 @@ public class CourseController {
             @RequestParam(name="rating", required = false) Integer rating,
             @RequestParam(name = "customer", required = false) String customer) {
         if (rating != null) {
-            return new ResponseEntity<>(courseRepository.findCoursesByRatingIgnoreCase(rating), HttpStatus.OK);
+            return new ResponseEntity<>(courseRepository.findCoursesByRating(rating), HttpStatus.OK);
         }
         if (customer != null){
             return new ResponseEntity<>(courseRepository.findCoursesByBookingsCustomersNameIgnoreCase(customer), HttpStatus.OK);

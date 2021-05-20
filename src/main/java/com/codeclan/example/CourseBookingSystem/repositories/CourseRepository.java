@@ -8,6 +8,6 @@ import java.util.List;
 
 @Repository
 public interface CourseRepository extends JpaRepository<Course, Long> {
-    List<Course> findCoursesByRatingIgnoreCase(int rating);
+    List<Course> findCoursesByRating(int rating);
     List<Course> findCoursesByBookingsCustomersNameIgnoreCase(String customer_name);
 }
